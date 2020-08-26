@@ -124,8 +124,8 @@ $(window).on('load', function() {
           point['Icon Color']
         );
 
-      if (point.latitude !== '' && point.longitude !== '') {
-        var marker = L.marker([point.latitude, point.longitude], {icon: icon})
+      if (point.Latitude !== '' && point.Longitude !== '') {
+        var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Protocolo'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Acessar_drive']);
@@ -214,7 +214,7 @@ $(window).on('load', function() {
         var pointsVisible = [];
         for (i in points) {
           if (map.hasLayer(layers[points[i].Group]) &&
-              map.getBounds().contains(L.latLng(points[i].latitude, points[i].longitude))) {
+              map.getBounds().contains(L.latLng(points[i].Latitude, points[i].Longitude))) {
             pointsVisible.push(points[i]);
           }
         }
